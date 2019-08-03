@@ -13,14 +13,14 @@ const long long INF = 1000000000000000000LL;
 //const int WASTE=∞;
 //#define int unsigned long long
 ll power(ll a,ll b){
-	ll i=1;
-	while(b){
-		if(b%2)
-			i=(i*a)%mod;
-		b/=2;
-		a=(a*a)%mod;
-	}
-	return i;
+    ll i=1;
+    while(b){
+        if(b%2)
+            i=(i*a)%mod;
+        b/=2;
+        a=(a*a)%mod;
+    }
+    return i;
 }
 ll mulmod(ll a, ll b) { 
     ll res = 0;
@@ -43,13 +43,10 @@ signed main() {
         int s=0,ss=0;
         int n;
         cin>>n;
-        for(int x=1;x<=n;x++){
-            s+=x*x;
-            ss+=x;
-        }
-        ss*=ss;
+        s = pow((n*(n+1)/2),2);
+        ss = n*(n+1)*(2*n+1)/6;
         cout<<abs(ss-s)<<endl;
     }
     
-	return 0;
+    return 0;
 }
