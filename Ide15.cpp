@@ -47,7 +47,7 @@ signed main() {
         for(int y=1;y<=m;y++) dp[1][y]=1;
         for(int x=2;x<=n;x++){
             for(int y=2;y<=m;y++){
-                dp[x][y]=(dp[x-1][y]+dp[x][y-1])%mod;
+                dp[x][y]=(dp[x-1][y]+dp[x][y-1]);
             }
         }
         cout<<dp[n][m]<<endl;
